@@ -8,8 +8,9 @@
 #
 
 timestamp=ycsb-`date +"%Y.%m.%d-%T"`
-mkdir -p /tmp/hbase/hbase/${timestamp}
+mkdir -p /tmp/hbase/${timestamp}
 
+#
 #capture everything from stderr and stdout
 exec > >(tee /tmp/hbase/${timestamp}/uberlog)
 exec 2>&1
